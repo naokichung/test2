@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+	font-family:微軟正黑體;
+}
+h2{
+	color: rgba(32, 62, 75, 1);
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 2;
+    margin: 10px;
+}
+p{
+	font-size: 18px;
+    line-height: 1.5;
+}
+
+
+
+/* clearfix float */
+.clearfix:before, .clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+  clear:both;
+}
+
+.clearfix {
+  zoom:1;
+}
+/* ---------- MAIN ---------- START */
+
+.wrap{
+	max-width:1024px;
+	margin:0px auto;
+}
+.header{
+	background-color: rgba(255, 255, 255, 0.9);
+	position: fixed;
+	width: 1024px;
+	height: 60px;
+	z-index: 100;
+}
+
+@media (max-width: 1024px){
+	.header {
+    	width: 100%;
+	}	
+}
+
+.logo h1 a{
+	/*background-image: url(../imges/logo.png);*/
+	background-image:url(../imges/logo-01.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	display:block;
+	width: 100px;
+	height: 50px;
+	margin-left: 100px;
+	float: left;
+	text-indent:101%;
+	overflow:hidden;
+	white-space: nowrap;
+	margin-top: 5px;
+}
+
+.banner{
+	background-image: url(../imges/banner.png);
+	background-repeat:no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 370px;
+}
+
+.bannerText{
+	width: 300px;
+	height: 165px;
+	background-color:rgba(32, 62, 75, 0.90);
+    position: relative;
+    margin: auto;
+    top: 30%;
+}
+
+.bannerText img{
+	margin-left: 60px;
+	margin-top: 25px;
+}
+.bannerText p {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    margin-left: 19px;
+    margin-top: 10px;
+}
+
+/*MENU*/
+.menu{
+
+  float: right;
+  margin-top: 20px;
+  margin-right: 100px;
+}
+.menu li{
+  float: left;
+  margin: 0 20px;
+	line-height: 1.5;
+}
+.menu li a{
+	color:rgba(7, 40, 55, 0.90);
+	font-size:16px;
+	padding-bottom: 5px;
+	text-decoration:none;
+	border-bottom:1px solid #fff;
+	transition: all 1s;
+
+}
+
+.menu li a:hover{
+	/*background-color: rgba(7, 40, 55, 0.90);*/
+	color: rgba(7, 40, 55, 0.90);
+	border-bottom:1px solid rgba(7, 40, 55, 0.90);
+
+}
+.showmenu{
+	display:none;
+}
+
+@media(max-width:810px){
+	
+	.menu{
+		max-height: 0px;
+		overflow: hidden;
+
+		transition: max-height 2.0s;
+
+		position: fixed;
+		z-index: 100;
+		top: 55px;
+		left: 0;
+		right: 0;
+
+		background: rgba(7, 40, 55, 0.9);
+		/*其他設定*/
+		margin:0px 0px;
+
+	}
+	.menu li{
+		float:none;
+		border-bottom: 1px dashed #fff;
+		margin:0px 0px;
+		line-height: 3;
+		text-align: center;
+	}
+	.menu li a{
+		transition: all 0.3s;
+		color: #fff;
+		border-bottom:none;
+  }
+
+ 	.menu li a:hover{
+  		color:#fff;
+    	border-bottom:1px solid #fff;
+  }
+
+	.showmenu{
+		display:block;
+		float:right;
+		margin:20px;
+		color:rgba(7, 40, 55, 0.90);
+		text-decoration: none;
+		transition:all 0.3s;
+		line-height: 1.5;
+		
+	}
+	.showmenu:hover{
+		color: #9FB2B7;
+	}
+
+	.menu-show .menu{
+		max-height: 500px;
+	}
+}	
+
+
+/*contentMe*/
+
+.contentMe{
+	height: 543px;
+}
+
+.contentMe h2{
+	text-align:center;
+	margin: 30px;
+}
+
+.contentMe a{
+	color: #fff;
+    background-color: rgba(32, 62, 75, 1);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 41%;
+    transition:all 0.3s;
+}
+
+.contentMe a:hover{
+    background-color:#9FB2B7;
+}
+
+.callMe{
+	width: 300px;
+	text-align: center;
+    margin-left: 35%;
+	margin-top: 38px;
+}
+.callMeBL{
+	border-bottom: 1px solid rgba(5, 39, 53, 0.9);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+/*whyMe*/
+.whyMe{
+	height: 654px;
+	background-color:rgba(229, 233, 234, 1);
+
+}
+
+
+/*sverceLine*/
+
+/*produce*/
+.lawyerP{
+	float:left;
+}
+
+.lawyerP img{
+	w15
+}
+.lawyerT{
+	float:left;
+}
